@@ -8,6 +8,12 @@
 
 import UIKit
 
+class customCell: UITableViewCell{
+    @IBOutlet weak var mainTitle: UILabel!
+    @IBOutlet weak var dateTitle: UILabel!
+    @IBOutlet weak var completeCheck: UISwitch!
+}
+
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
@@ -36,20 +42,20 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         else{
             return 0
         }
-        
-       // return todoList?.count
     }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-      
         
-       let cell = UITableViewCell(style: .default, reuseIdentifier: nil)
-        if let todo = todoList {
-
-          
-  
-            cell.textLabel?.text = todo[indexPath.row]
-            
-        }
+        let cell = tableView.dequeueReusableCell(withIdentifier: "myCell") as! customCell
+        //let cell = UITableViewCell(style: .default, reuseIdentifier: "myCell")
+        cell.mainTitle.text = todoList?[indexPath.row].title
+        cell.dateTitle.text = todoList?[indexPath.row].date
+        cell.completeCheck.setOn((todoList?[indexPath.row].completed)!, animated: false)
+        
+       // if let todo = todoList {
+       //     cell?.textLabel?.text = todo[indexPath.row]
+       // }
+        
         return cell
     }
     
@@ -58,7 +64,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         if editingStyle == .delete {
             todoList?.remove(at: indexPath.row)
-           tableView.deleteRows(at: [indexPath], with: .fade) 
+            tableView.deleteRows(at: [indexPath], with: .fade)
             
             tableView.reloadData()
             print("deleted")

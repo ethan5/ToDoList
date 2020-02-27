@@ -8,15 +8,20 @@
 
 import Foundation
 
-var todoList:[String]?
+struct listValues{
+    var title : String?
+    var date : String?
+    var completed : Bool
+}
 
-func saveData(todoList:[String]) {
-    
+var todoList:[listValues]?
+
+func saveData(todoList:[listValues]) {
     UserDefaults.standard.set(todoList, forKey: "todoList")
 }
 
-func fetchData() -> [String]? {
-    if let todo = UserDefaults.standard.array(forKey: "todoList") as? [String] {
+func fetchData() -> [listValues]? {
+    if let todo = UserDefaults.standard.array(forKey: "todoList") as? [listValues] {
         return todo
     }
     else{

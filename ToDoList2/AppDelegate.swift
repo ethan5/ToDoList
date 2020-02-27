@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             todoList = todo
         }
         else{
-            todoList = [String]()
+            todoList = [listValues]()
         }
 
         return true

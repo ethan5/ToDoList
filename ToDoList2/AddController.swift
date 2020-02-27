@@ -11,17 +11,23 @@ import UIKit
 class AddController: UIViewController {
 
     @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var dateField: UIDatePicker!
+    
+    let formatter = DateFormatter()
+    var dateText = "something broke"
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        formatter.dateFormat = "dd/MM/yyyy"
         // Do any additional setup after loading the view.
     }
     
     @IBAction func addPressed(_ sender: UIButton) {
         
         if (textField.text != nil) && textField.text != "" {
-            todoList?.append(textField.text!)
+            dateText = formatter.string(from: dateField.date)
+            print(dateText)
+            todoList?.append(listValues(title: textField.text, date: dateText, completed: false))
             textField.text = ""
             textField.placeholder = "Add more?"
         }
