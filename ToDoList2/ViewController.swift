@@ -40,8 +40,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
        // return todoList?.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .default, reuseIdentifier: nil)
+      
+        
+       let cell = UITableViewCell(style: .default, reuseIdentifier: nil)
         if let todo = todoList {
+
+          
+  
             cell.textLabel?.text = todo[indexPath.row]
             
         }
@@ -53,7 +58,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         if editingStyle == .delete {
             todoList?.remove(at: indexPath.row)
-           tableView.deleteRows(at: [indexPath], with: .fade) // no
+           tableView.deleteRows(at: [indexPath], with: .fade) 
             
             tableView.reloadData()
             print("deleted")
