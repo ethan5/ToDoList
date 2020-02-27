@@ -18,7 +18,7 @@ class AddController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        formatter.dateFormat = "dd/MM/yyyy"
+        formatter.dateFormat = "MM/dd/yyyy"
         // Do any additional setup after loading the view.
     }
     
