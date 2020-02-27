@@ -34,34 +34,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Finish app" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rk3-MR-36m">
-                                                    <rect key="frame" x="5" y="12" width="397" height="21"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="21" id="2TU-RI-1ZX"/>
-                                                        <constraint firstAttribute="height" constant="21" id="66W-P9-ygZ"/>
-                                                        <constraint firstAttribute="width" constant="216" id="GcB-VG-f5p"/>
-                                                        <constraint firstAttribute="width" constant="216" id="OC2-tI-qhK"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                    <variation key="default">
-                                                        <mask key="constraints">
-                                                            <exclude reference="2TU-RI-1ZX"/>
-                                                            <exclude reference="66W-P9-ygZ"/>
-                                                            <exclude reference="GcB-VG-f5p"/>
-                                                            <exclude reference="OC2-tI-qhK"/>
-                                                        </mask>
-                                                    </variation>
-                                                    <variation key="heightClass=regular-widthClass=compact">
-                                                        <mask key="constraints">
-                                                            <exclude reference="2TU-RI-1ZX"/>
-                                                            <include reference="66W-P9-ygZ"/>
-                                                            <include reference="GcB-VG-f5p"/>
-                                                            <exclude reference="OC2-tI-qhK"/>
-                                                        </mask>
-                                                    </variation>
-                                                </label>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="lki-ye-pTb">
                                                     <rect key="frame" x="355" y="6.5" width="49" height="31"/>
                                                     <constraints>
@@ -105,6 +77,46 @@
                                                         </mask>
                                                     </variation>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Finish app" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rk3-MR-36m">
+                                                    <rect key="frame" x="20" y="11.5" width="213" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="2TU-RI-1ZX"/>
+                                                        <constraint firstAttribute="height" constant="21" id="66W-P9-ygZ"/>
+                                                        <constraint firstAttribute="width" constant="216" id="GcB-VG-f5p">
+                                                            <variation key="heightClass=regular-widthClass=compact" constant="213"/>
+                                                        </constraint>
+                                                        <constraint firstAttribute="width" constant="216" id="OC2-tI-qhK"/>
+                                                        <constraint firstAttribute="width" constant="422" id="X3g-7e-l21"/>
+                                                        <constraint firstAttribute="height" constant="21" id="dt8-Pn-v12"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="2TU-RI-1ZX"/>
+                                                            <exclude reference="66W-P9-ygZ"/>
+                                                            <exclude reference="GcB-VG-f5p"/>
+                                                            <exclude reference="OC2-tI-qhK"/>
+                                                            <exclude reference="X3g-7e-l21"/>
+                                                            <exclude reference="dt8-Pn-v12"/>
+                                                        </mask>
+                                                    </variation>
+                                                    <variation key="heightClass=compact-widthClass=regular">
+                                                        <mask key="constraints">
+                                                            <include reference="X3g-7e-l21"/>
+                                                            <include reference="dt8-Pn-v12"/>
+                                                        </mask>
+                                                    </variation>
+                                                    <variation key="heightClass=regular-widthClass=compact">
+                                                        <mask key="constraints">
+                                                            <exclude reference="2TU-RI-1ZX"/>
+                                                            <include reference="66W-P9-ygZ"/>
+                                                            <include reference="GcB-VG-f5p"/>
+                                                            <exclude reference="OC2-tI-qhK"/>
+                                                        </mask>
+                                                    </variation>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="RxP-Cs-W1w" firstAttribute="centerX" secondItem="rbh-ST-32T" secondAttribute="centerX" constant="79.5" id="5nU-6G-pSV">
@@ -114,7 +126,7 @@
                                                 <constraint firstItem="rk3-MR-36m" firstAttribute="centerX" secondItem="rbh-ST-32T" secondAttribute="centerX" constant="-79" id="Dju-po-pM0"/>
                                                 <constraint firstItem="RxP-Cs-W1w" firstAttribute="centerY" secondItem="rbh-ST-32T" secondAttribute="centerY" id="L1Z-kZ-IEj"/>
                                                 <constraint firstItem="rk3-MR-36m" firstAttribute="centerX" secondItem="rbh-ST-32T" secondAttribute="centerX" constant="-79" id="OPX-GN-7ls">
-                                                    <variation key="heightClass=regular-widthClass=compact" constant="-79"/>
+                                                    <variation key="heightClass=regular-widthClass=compact" constant="-80.5"/>
                                                 </constraint>
                                                 <constraint firstItem="lki-ye-pTb" firstAttribute="centerY" secondItem="rbh-ST-32T" secondAttribute="centerY" id="OyZ-ed-iYt"/>
                                                 <constraint firstItem="rk3-MR-36m" firstAttribute="centerY" secondItem="rbh-ST-32T" secondAttribute="centerY" id="U8Q-sR-k1T"/>
@@ -123,7 +135,7 @@
                                                     <variation key="heightClass=compact-widthClass=regular" constant="248"/>
                                                 </constraint>
                                                 <constraint firstItem="rk3-MR-36m" firstAttribute="centerX" secondItem="rbh-ST-32T" secondAttribute="centerX" constant="-163" id="blJ-Nq-L7e">
-                                                    <variation key="heightClass=compact-widthClass=regular" constant="-200.5"/>
+                                                    <variation key="heightClass=compact-widthClass=regular" constant="-173"/>
                                                 </constraint>
                                                 <constraint firstItem="lki-ye-pTb" firstAttribute="centerX" secondItem="rbh-ST-32T" secondAttribute="centerX" constant="360.5" id="feU-nI-3XJ">
                                                     <variation key="heightClass=compact-widthClass=regular" constant="359.5"/>
@@ -209,7 +221,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1041.9642857142858" y="114.49275362318842"/>
+            <point key="canvasLocation" x="1038.6160714285713" y="111.59420289855073"/>
         </scene>
         <!--Add Controller-->
         <scene sceneID="wLO-S8-DDi">
